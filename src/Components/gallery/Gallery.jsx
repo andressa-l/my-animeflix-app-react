@@ -2,7 +2,8 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components'
 import { useGlobalContext } from '../../context/global';
-import Home from '../home/Homepage'
+// import Home from '../home/Homepage'
+import './Gallery.css'
 
 function Gallery() {
     const {getAnimePictures, pictures} = useGlobalContext()
@@ -31,14 +32,14 @@ function Gallery() {
                 </Link>
             </div>
             <div className="big-image">
-                <img src={pictures[index]?.jpg.image_url} alt="" />
+                <img className='image-big' src={pictures[index]?.jpg.image_url} alt="" />
             </div>
             <div className="small-images">
                 {pictures?.map((picture, i) => {
                     return <div className="image-con" onClick={()=>{
                         handleImageClick(i)
                     }} key={i}>
-                        <img 
+                        <img className='image-small' 
                             src={picture?.jpg.image_url}
                             style={{
                                 border: i === index ? "3px solid #27AE60" : "3px solid #e5e7eb",
@@ -65,52 +66,7 @@ const GalleryStyled = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 5rem;
-    .back{
-        position: absolute;
-        display: flex;
-        align-items: flex-start;
-        top: 8rem;
-        left: 2rem;
-        color: white;
-
-        a{
-            font-weight: 600;
-            text-decoration: none;
-            color: #EB5757;
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-        }
-    }
-    .big-image{
-        display: inline-block;
-        padding: 1rem;
-        margin: 1rem 0;
-        background-color: #fff;
-        border-radius: 7px;
-        border: 5px solid #e5e7eb;
-        position: relative;
-        img{
-            max-width: 350px;
-        }
-    }
-
-    .small-images{
-        display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
-        width: 80%;
-        padding: 2rem;
-        border-radius: 7px;
-        background-color: #fff;
-        img{
-            max-width: 6rem;
-            height: 6rem;
-            object-fit: cover;
-            cursor: pointer;
-            border-radius: 5px;
-        } 
-    }
+    
 `;
 
 export default Gallery

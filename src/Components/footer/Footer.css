@@ -10,13 +10,13 @@ footer {
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     color: #fff;
 }
-footer div {
+.footer div {
     color: #888;
     font-size: 14px;
     margin: 0;
 }
 
-footer div a {
+.footer div a {
     font-size: 30px;
     line-height: 56px;
     height: 56px;
@@ -33,19 +33,19 @@ footer div a {
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-footer div a:hover {
+.footer div a:hover {
     color: #000;
     text-decoration: underline;
 }
 
-footer div a:visited {
+.footer div a:visited {
     color: #888;
 }
 
-footer div a:active {
+.footer div a:active {
     color: #888;
 }
 
-footer div a:focus {
+.footer div a:focus {
     color: #888;
 }

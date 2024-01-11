@@ -1,36 +1,47 @@
 .header {
-    height: 11vh;
-    /* line-height: 10vh; */
+    height: 12vh;
+    line-height: 10vh;
+    width: 100vw;
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     color: #fff;
     position: relative;
     z-index: 999;
 }
 
-.flexSB {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (max-width: 1024px) {
+    .header {
+        min-width: 100vw;
+    }
 }
 
-.container {
-    max-width: 90%;
-    margin: auto;
+@media screen and (max-width: 768px) {
+    .header {
+        min-width: 70vw;
+    }
 }
 
-.logo .logo-img {
+@media screen and (max-width: 500px) {
+    .header {
+        width: 100%;
+    }
+}
+
+/* 
+@media screen and (max-width: 500px) {
+    .header {
+        padding: 1% 0;
+    }
+} */
+
+.logo a .logo-img{
     width: 90px;
-    margin-top: 5px;
-    margin-right: 10px;
+    margin-top: 15px;
+    margin-right: 25px;
 }
 
-.header .titulos {
+.header a {
     color: #fff;
     margin-left: 30px;
-}
-
-a {
-    color: #fff;
 }
 
 .header i {
@@ -43,17 +54,32 @@ a {
     margin: 0 10px;
 }
 
-.header button {
+.header .btn-inscrever {
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
+    padding: .8rem 1rem;
+    font-size: .8rem;
+    
 }
-
-
 
 .toggle {
     display: none;
 }
+.container {
+    max-width: 90%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+}
+.flexSB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 
 @media only screen and (max-width: 768px) {
     .header nav .flexSB {

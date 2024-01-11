@@ -13,16 +13,20 @@ function Airing({rendered}) {
             return airingAnime?.map((anime) => {
                 const { mal_id, title, images } = anime;
                 return (<Link to={`/anime/${mal_id}`} key={mal_id}>
-                    <img src={images.jpg.large_image_url} alt="" />
-                    <h1 className='title'>{title}</h1>
+                        <div className='link-image'>
+                            <img className='image-airing' src={images.jpg.large_image_url} alt="" />
+                            <h1 className='title'>{title}</h1>
+                        </div>
                     </Link>
                 );
             })
         }else{
             return searchResults?.map((anime) => {
                 return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
-                    <img src={anime.images.jpg.large_image_url} alt="" />
-                    <h1 className='title'>{anime.title}</h1>
+                    <div className='link-image'>
+                        <img className='image-airing' src={anime.images.jpg.large_image_url} alt="" />
+                        <h1 className='title'>{anime.title}</h1>
+                    </div>
                 </Link>
             })
         }

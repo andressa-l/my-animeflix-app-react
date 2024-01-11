@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='footer'>
             <div className="social-media">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-facebook"></i>

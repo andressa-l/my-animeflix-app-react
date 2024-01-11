@@ -1,0 +1,29 @@
+.anime {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px;
+}
+
+.image-sidebar {
+    width: 100%;
+    border-radius: 5px;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-sidebar:hover {
+    transform: scale(1.1);
+}
+
+.sidebar-link {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    color: #fff;
+    font-size: .8rem;
+}
+
+h5 {
+    font-size: .7rem;
+}

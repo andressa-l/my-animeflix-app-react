@@ -1,48 +1,43 @@
-/* header {
-    padding: 4rem 5rem;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.search-container {
+    padding: 4% 5%;
     width: 60%;
     margin: 0 auto;
     transition: all 0.4s ease-in-out;
-} */
-
-/* @media screen and (max-width: 1530px) {
-    header {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        padding: 2rem 1rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    header {
-        padding: 1rem 0;
-    }
-} */
-
-@media screen and (max-width: 768px) {
-    .search-container {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .search-container {
-        justify-content: center;
-    }
-}
-.search-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-top: 2rem;
     flex-wrap: wrap;
-    
-} 
+}
+
+form {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+}
+
+@media screen and (max-width: 1530px) {
+    .search-container {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-container {
+        padding: 2% 1%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search-container {
+        padding: 1% 0;
+    }
+}
+
 .filter-btn {
     margin: 0 10px;
     cursor: pointer;
@@ -55,47 +50,29 @@
     background-color: #fff;
     display: flex;
     font-family: inherit;
-    
-} 
+}
 
-button {
+.filter-btn button {
     padding: 0.5rem 1rem;
-     display: flex;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
-    outline: none;
     border-radius: 3rem;
     font-size: 1rem;
-    background-color: #fff;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     font-family: inherit;
-    border: 3px solid #e5e7eb;
     font-weight: 800;
-} 
-
-button {
     background: #e50813;
     color: #fff;
     outline: none;
     border: none;
-    padding: 12px 40px;
-    font-weight: 500;
-    font-size: 17px;
 }
 
-button:hover {
-    background-color: #e50813;
-    /* color: #fff; */
+.filter-btn button:hover {
+    background-color: #6a7d89;
 }
 
-form {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-}
-
-/* aqui */
 .input-control {
     position: relative;
     transition: all 0.4s ease-in-out;
@@ -104,11 +81,7 @@ form {
     width: 100%;
 }
 
-.input-control input:focus {
-    border: 3px solid #6a7d89;
-}
-
-.input-control input {
+.search-form .input-control input {
     width: 100%;
     padding: 0.5rem 1rem;
     border: none;
@@ -120,13 +93,13 @@ form {
     transition: all 0.4s ease-in-out;
 }
 
-.input-control button {
-    background-color: #6a7d89;
-    padding: 0.5rem ;
-    border: none;
-    outline: none;
-    /* border-radius: 30px; */
-    font-size: 1rem;
+.input-control input:focus {
+    border: 3px solid #6a7d89;
+}
+.search-form .input-control .btn-buscar {
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -135,17 +108,5 @@ form {
     top: 50%;
     transform: translateY(-50%);
     background: #e50813;
-    color: #fff;
-} 
-
-.btn-buscar {
-    background: #e50813;
-    color: #fff;
-    outline: none;
-    border: none;
-    padding: 2rem;
-    font-weight: 500;
-    font-size: 17px;
+    font-weight: bold;
 }
-
-

@@ -49,11 +49,11 @@ function AnimeItem() {
                     Back to Home
                 </Link>
             </div>
-            <h1>{title}</h1>
+            <h1 className='titulo'>{title}</h1>
             <div className="details">
                 <div className="detail">
                     <div className="image">
-                        <img src={images?.jpg.large_image_url} alt="" />
+                        <img className='image-item' src={images?.jpg.large_image_url} alt="" />
                     </div>
                     <div className="anime-details">
                         <p><span>Aired:</span><span>{aired?.string}</span></p>
@@ -96,7 +96,7 @@ function AnimeItem() {
                     const {images, name, mal_id} = character.character
                     return <Link to={`/character/${mal_id}`} key={index}>
                         <div className="character">
-                            <img src={images?.jpg.image_url} alt="" />
+                            <img className='image-charactere' src={images?.jpg.image_url} alt="" />
                             <h4>{name}</h4>
                             <p>{role}</p>
                         </div>
@@ -110,6 +110,8 @@ function AnimeItem() {
 const AnimeItemStyled = styled.div`
     padding: 3rem 18rem;
     background-color: #141414;
+    display: inline-block;
+    
 `;
 
     // h1{

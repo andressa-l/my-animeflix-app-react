@@ -14,16 +14,20 @@ function Upcoming({rendered}) {
             return upcomingAnime?.map((anime) => {
                 const { mal_id, title, images } = anime;
                 return (<Link to={`/anime/${mal_id}`} key={mal_id}>
-                    <img src={images.jpg.large_image_url} alt="" />
-                    <h1 className='title'>{title}</h1>
+                    <div className='link-image'>
+                        <img className='image-upcoming' src={images.jpg.large_image_url} alt="" />
+                        <h1 className='title'>{title}</h1>
+                    </div>
                     </Link>
                 );
             })
         }else{
             return searchResults?.map((anime) => {
                 return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
-                    <img src={anime.images.jpg.large_image_url} alt="" />
-                    <h1 className='title'>{title}</h1>
+                    <div className='link-image'>
+                        <img className='image-upcoming' src={anime.images.jpg.large_image_url} alt="" />
+                        <h1 className='title'>{title}</h1>
+                    </div>
                 </Link>
             })
         }
@@ -42,47 +46,5 @@ function Upcoming({rendered}) {
 const PopularStyled = styled.div`
     display: flex;
 `;
-//     .upcoming-anime{
-//         margin-top: 2rem;
-//         padding: 2rem;
-//         width: 100%;
-//         display: grid;
-//         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-//         grid-gap: 1rem;
-//         background-color: #141414;
-//         a{
-//             display: flex;
-//             align-items: center;
-//             flex-wrap: wrap;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-content: center;
-//             padding: 0;
-//             margin: 0;
-//         }
-//         img {
-//             width: 250px;
-//             height: 350px;
-//             object-fit: cover;
-//             border-radius: 5px;
-//             transition: transform 0.2s ease-in-out;
-
-//         }
-
-//         img:hover {
-//             transform: scale(1.1);
-//         }
-//     }
-
-//     .title {
-//         color: #fff;
-//         font-size: .8rem;
-//         font-weight: 600;
-//         text-align: center;
-//         margin-top: 1rem;
-//         margin-bottom: 1rem;
-//         text-decoration: none;
-//     }
-// `;
 
 export default Upcoming

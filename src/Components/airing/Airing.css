@@ -1,6 +1,4 @@
-.airing {
-    display: flex;
-}
+
 
 .airing-anime {
     margin-top: 2rem;
@@ -12,7 +10,7 @@
     background-color: #141414;
 }
 
-a {
+.link-image {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -23,7 +21,7 @@ a {
     margin: 0;
 }
 
-img {
+.image-airing {
     width: 250px;
     height: 350px;
     object-fit: cover;
@@ -32,7 +30,7 @@ img {
 
 }
 
-img:hover {
+.image-airing:hover {
     transform: scale(1.1);
 }
 

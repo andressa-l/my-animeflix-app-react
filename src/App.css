@@ -13,15 +13,49 @@
     :root {
         --h2-font-size: 1.5rem;
         --normal-font-size: 1rem;
+        
+    }
+}
+
+@media screen and (min-width: 1042px) {
+    :root {
+        font-size: .8rem;
     }
 }
 
 body {
     background-color: #141414;
-    color: #6c7983;
+    color: #fff;
     min-height: 100vh;
-    width: 100%;
+    max-width: 140vw;
     line-height: 1.4;
     font-size: 1.2rem;
     font-weight: 400;
+    overflow-x: hidden;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+button {
+    background: #e50813;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
