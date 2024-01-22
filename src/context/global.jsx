@@ -66,7 +66,7 @@ export const GlobalContextProvider = ({children}) => {
             state.isSearch = true;
         }else{
             state.isSearch = false;
-            alert('Please enter a search term')
+            alert('Por favor insira um termo de pesquisa')
         }
     }
 

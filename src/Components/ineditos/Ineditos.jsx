@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/global'
 import styled from 'styled-components'
 import Sidebar from '../sidebar/Sidebar'
-import './Upcoming.css'
+// import PopularCard from '../imageCard/popularCard'
+import './Ineditos.css'
 
-function Upcoming({rendered}) {
+function Ineditos({rendered}) {
     const {upcomingAnime ,isSearch, searchResults} = useGlobalContext()
 
     const conditionalRender = () => {
@@ -39,12 +40,14 @@ function Upcoming({rendered}) {
                 {conditionalRender()}
             </div>
             <Sidebar />
+            
         </PopularStyled>
+        
     )
 }
 
 const PopularStyled = styled.div`
-    display: flex;
+    // display: flex;
 `;
 
-export default Upcoming
+export default Ineditos

@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import "./Header.css"
 import logo from './logo-1.png'
+import Login from '../login/Login'
+import { Link } from "react-router-dom"
 
 const Header = () => {
   const [Mobile, setMobile] = useState(false)
@@ -30,9 +32,11 @@ const Header = () => {
         </nav>
         <div className='account flexSB'>
           <a href='/'><i className='fa fa-search'></i></a>
-          <a href='/'><i class='fas fa-bell'></i></a>
+          <a href='/'><i className='fas fa-bell'></i></a>
           <a href='/'><i className='fas fa-user'></i></a>
-          <button className="btn-inscrever">Inscreva-se</button>
+          <button className="btn-inscrever">
+            <a href='/login'>Inscreva-se</a>
+          </button>
         </div>
       </div>
     </header>

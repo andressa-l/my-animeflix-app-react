@@ -1,11 +1,11 @@
 
 import React from 'react'
 import { useGlobalContext } from '../../context/global.jsx'
-import Popular from '../popular/Popular.jsx'
-import Upcoming from '../upcoming/Upcoming.jsx'
-import Airing from '../airing/Airing.jsx'
-import { MdLocalFireDepartment } from 'react-icons/md'
-import { MdOutlineSmartDisplay } from 'react-icons/md'
+import Popular from '../populares/Popular.jsx'
+import Ineditos from '../ineditos/Ineditos.jsx'
+import Lancamentos from '../lancamentos/Lancamentos.jsx'
+import { MdLocalFireDepartment, MdOutlineSmartDisplay } from 'react-icons/md'
+// import { MdOutlineSmartDisplay } from 'react-icons/md'
 import { RiSendPlaneFill } from 'react-icons/ri'
 import { FaSearchengin } from "react-icons/fa";
 import "./Homepage.css"
@@ -29,9 +29,9 @@ function Homepage() {
             case 'popular':
                 return <Popular rendered={rendered} />
             case 'airing':
-                return <Airing rendered={rendered} />
+                return <Lancamentos rendered={rendered} />
             case 'upcoming':
-                return <Upcoming rendered={rendered} />
+                return <Ineditos rendered={rendered} />
             default:
                 return <Popular rendered={rendered} />
         }
@@ -71,7 +71,7 @@ function Homepage() {
                         </h1>
                     */}
             </div>
-
+            {/* <PopularCard /> */}
             {switchComponent()}
         </>
     )

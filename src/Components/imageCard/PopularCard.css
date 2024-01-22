@@ -1,54 +1,7 @@
-/* .anime {
-    display: flex;
-    flex-direction: row;
-    max-width: max-content; */
-    /* max-height: max-content;
-} */
-
-/* .image-sidebar {
-    width: 100%;
-    border-radius: 5px;
-
-    transition: transform 0.2s ease-in-out;
-} */
-
-/* .image-sidebar:hover {
-    transform: scale(1.1);
-} */
-
-.sidebar-link {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    gap: .4rem;
-    color: #fff;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
-    margin: 2rem;
-    
-
-}
-h5 {
-    font-size: 1rem;
-}
-
 /*---------------control-btn-------------*/
-.heading h3 {
+.heading h1 {
     font-weight: 500;
     margin: 30px 0;
-    font-size: 3rem;
 }
 
 .heading a {
@@ -61,25 +14,15 @@ h5 {
     align-items: center;
 }
 
-.container-sidebar {
+.container {
     max-width: 90%;
     margin: auto;
-    max-width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
 }
 
-.drop-left {
-    position: relative;
-    font-size: 3rem;
+.control-btn .next {
+    position: absolute;
     top: 50%;
     right: 2%;
-    z-index: 99;
 }
 
 .control-btn button {
@@ -92,32 +35,13 @@ h5 {
     cursor: pointer;
 }
 
-.drop-right {
-    position: relative;
-    font-size: 3rem;
+.control-btn .prev {
+    position: absolute;
     top: 50%;
     left: 2%;
     z-index: 99;
 }
-.circle-outline {
-    font-size: large;
-    font-weight: bold;
-}
 
-.primary-btn {
-    background: #e50813;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-}
 /*---------------MovieBox-------------*/
 
 .MovieBox {

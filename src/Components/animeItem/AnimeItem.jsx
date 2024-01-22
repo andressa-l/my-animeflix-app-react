@@ -75,7 +75,7 @@ function AnimeItem() {
                     }}>{showMore ? 'Show Less': 'Read More'}</button>
                 </p>
             </div>
-            <h3 className="title">Trailer</h3>
+            <h3 className="names-title">Trailer</h3>
             <div className="trailer-con">
                 {trailer?.embed_url ? 
                     <iframe 
@@ -89,7 +89,7 @@ function AnimeItem() {
                     <h3>Trailer not available</h3>
                 }
             </div>
-            <h3 className="title">Characters</h3>
+            <h3 className="names-title">Characters</h3>
             <div className="characters">
                 {characters?.map((character, index) => {
                     const {role} = character
@@ -108,9 +108,9 @@ function AnimeItem() {
 }
 
 const AnimeItemStyled = styled.div`
-    padding: 3rem 18rem;
-    background-color: #141414;
-    display: inline-block;
+    // padding: 3rem 18rem;
+    // background-color: #141414;
+    // display: inline-block;
     
 `;
 

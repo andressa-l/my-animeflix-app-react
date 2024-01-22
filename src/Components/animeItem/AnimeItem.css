@@ -1,11 +1,11 @@
-.back {
+ .back {
     position: absolute;
     top: 10rem;
     left: 2rem;
     color: white;
 }
 
-.titulo{
+/* .titulo{
     display: inline-block;
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -15,20 +15,20 @@
     &:hover {
         transform: skew(-3deg);
     }
-}
+} */
 
-.title {
+/* .title {
     display: inline-block;
     margin: 3rem 0;
     font-size: 2rem;
     cursor: pointer;
-}
-h3 {
+} */
+/* h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #454e56;
-}
-
+} */
+/*
 .description {
     margin-top: 2rem;
     color: #6c7983;
@@ -60,7 +60,7 @@ button {
     background-color: #FFFFFF;
 }
 
-
+*/
 .details {
     background-color: #fff;
     border-radius: 20px;
@@ -74,7 +74,7 @@ button {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 }
-
+/*
 .image .image-item {
     width: 100%;
     height: 100%;
@@ -82,7 +82,7 @@ button {
     border-radius: 7px;
 
 }
-
+*/
 
 .anime-details {
     display: flex;
@@ -96,14 +96,13 @@ button {
     display: flex;
     gap: 1rem;
     align-items: center;
-
+    color: #6c7983;
 }
 
 .anime-details p span:first-child {
     font-weight: 600;
     color: #454e56;
-}
-
+}*/
 
 .characters {
     display: grid;
@@ -113,6 +112,7 @@ button {
     padding: 2rem;
     border-radius: 20px;
     border: 5px solid #e5e7eb;
+    color: #6c7983;
 }
 
 .characters .character {
@@ -141,4 +141,185 @@ button {
 
 .character p {
     color: #27AE60;
+} 
+
+/* Estilo geral */
+
+
+
+/* Estilo do contêiner principal */
+.AnimeItemStyled {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do título */
+.titulo {
+    grid-column: 1 / 13;
+    text-align: center;
+}
+
+/* Estilo do contêiner dos detalhes */
+.details {
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+/* Estilo do contêiner do detalhe */
+.detail {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+/* Estilo da imagem */
+.image {
+    grid-column: 1 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo dos detalhes do anime */
+.anime-details {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+.anime-details p {
+    grid-column: span 3;
+}
+
+.anime-details span {
+    display: block;
+}
+
+/* Estilo da descrição */
+.description {
+    grid-column: 7 / 13;
+    color: #454e56;
+}
+
+.description button {
+    display: block;
+    margin-top: 10px;
+    border: none;
+    background: none;
+    color: blue;
+    cursor: pointer;
+}
+
+/* Estilo do título do trailer */
+.names-title {
+    grid-column: 1 / 13;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+/* Estilo do contêiner do trailer */
+.trailer-con {
+    grid-column: 1 / 13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do iframe do trailer */
+iframe {
+    width: 100%;
+    /* height: ; */
+    object-fit: cover;
+    border: 5px solid black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo do contêiner dos personagens */
+.characters {
+    grid-column: 1 / 13;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Estilo do link do personagem */
+.character {
+    /* width: 24%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilo da imagem do personagem */
+.character img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilo do nome e do papel do personagem */
+/* .character h4,
+.character p {
+    text-align: center;
+} */
+
+/* Regras de mídia para telas menores que 600px */
+@media (max-width: 600px) {
+
+    /* Reduzir o tamanho do contêiner principal */
+    .AnimeItemStyled {
+        max-width: 400px;
+    }
+
+    /* Reduzir o tamanho do contêiner dos detalhes */
+    .details {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    /* Reduzir o tamanho do contêiner do detalhe */
+    .detail {
+        grid-column: 1 / 7;
+    }
+
+    /* Reduzir o tamanho da descrição */
+    .description {
+        grid-column: 1 / 7;
+    }
+
+    /* Reduzir o tamanho do contêiner dos personagens */
+    .characters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Reduzir o tamanho do link do personagem */
+    .character {
+        width: 49%;
+    }
 }
